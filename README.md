@@ -10,4 +10,4 @@ O aumento da utilização da internet tem modificado o ambiente de sala de aula 
 * Rafael Luiz Silva Machado Albuquerque - rlsma
 
 ## Entrega 1
-[Escopo do Projeto](../master/Entrega%201/Escopo%20do%20Projeto.pdf)
+[Escopo do Projeto](https://github.com/hugorbs/APS/blob/master/Entrega%201/Escopo%20do%20Projeto.pdf)

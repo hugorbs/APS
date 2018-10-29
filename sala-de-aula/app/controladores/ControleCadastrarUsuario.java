@@ -15,7 +15,7 @@ public class ControleCadastrarUsuario {
     public void cadastrarUsuario(Usuario usuario){
         IRepositorioUsuario repositorioUsuario = repositoriosFabrica.createRepositorioUsuario();
 
-        if(repositorioUsuario.existe(usuario.getEmail()) == false){
+        if(repositorioUsuario.existe(usuario.email) == false){
             repositorioUsuario.inserir(usuario);
         }
     }

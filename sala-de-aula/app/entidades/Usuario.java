@@ -1,46 +1,22 @@
 package entidades;
 
-public class Usuario {
-    private int id;
-    private int tipoUsuario;
-    private String email;
-    private String senha;
+import java.util.*;
+import javax.persistence.*;
 
-    public Usuario(String email, String senha, int tipoUsuario) {
-        this.setTipoUsuario(tipoUsuario);
-        this.setEmail(email);
-        this.setSenha(senha);
-    }
+import io.ebean.*;
+import play.data.format.*;
+import play.data.validation.*;
 
-    public int getId() {
-        return id;
-    }
+@Entity
+public class Usuario extends Model {
+    @Id
+    public int id;
 
-    public void setId(int id) {
-        this.id = id;
-    }
+    public int tipoUsuario;
 
-    public int getTipoUsuario() {
-        return tipoUsuario;
-    }
+    public String email;
 
-    public void setTipoUsuario(int tipoUsuario) {
-        this.tipoUsuario = tipoUsuario;
-    }
+    public String senha;
 
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getSenha() {
-        return senha;
-    }
-
-    public void setSenha(String senha) {
-        this.senha = senha;
-    }
+    public static final Finder<Long, Usuario> find = new Finder<>(Usuario.class);
 }

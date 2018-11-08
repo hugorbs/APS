@@ -39,3 +39,12 @@ services:
       - "3002:3002"
     depends_on:
       - controle-materia-db
+  frontend-acesso:
+    build: ./frontend-acesso
+    ports:
+     - "80:80"
+  frontend-materia:
+    build: ./frontend-materia
+    ports:
+     - "8000:80"
+

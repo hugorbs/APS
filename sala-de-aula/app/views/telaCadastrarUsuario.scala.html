@@ -1,0 +1,18 @@
+@()
+
+@import helper._
+
+
+<h1>Cadastrar Usuário</h1>
+@helper.form(action = helper.CSRF(routes.ControleTelaCadastroUsuario.save())) {
+    <fieldset>
+        email:<input name ="email"><br>
+        senha:<input name ="senha"><br>
+        papel:
+        <select name="papel">
+            <option value="1">Aluno</option>
+            <option value="2">Professor</option>
+        </select>
+    </fieldset>
+    <input type="Submit" class="btn primary">
+}

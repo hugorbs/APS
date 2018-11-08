@@ -10,16 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_08_011006) do
+ActiveRecord::Schema.define(version: 2018_11_08_022204) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "alunos", force: :cascade do |t|
-    t.string "matricula"
+  create_table "materia", force: :cascade do |t|
+    t.integer "cod_materia"
+    t.string "ementa"
     t.string "nome"
-    t.string "login"
-    t.string "senha"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

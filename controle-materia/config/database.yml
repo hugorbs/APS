@@ -1,0 +1,16 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: controle-materia-db
+  username: postgres
+  password:
+  pool: 5
+
+development:
+  <<: *default
+  database: controle_materia_development
+
+
+test:
+  <<: *default
+  database: controle_materia_test

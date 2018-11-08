@@ -26,3 +26,16 @@ services:
       - "3001:3001"
     depends_on:
       - controle-turma-db
+  controle-materia-db:
+    image: postgres
+    volumes:
+      - ./tmp/db-materia:/var/lib/postgresql/data
+  controle-materia-web:
+    build: ./controle-materia
+    command: bundle exec rails s -p 3002 -b '0.0.0.0'
+    volumes:
+      - ./controle-materia:/controle-materia
+    ports:
+      - "3002:3002"
+    depends_on:
+      - controle-materia-db

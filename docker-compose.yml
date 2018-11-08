@@ -1,0 +1,28 @@
+version: '3'
+services:
+  controle-acesso-db:
+    image: postgres
+    volumes:
+      - ./tmp/db:/var/lib/postgresql/data
+  controle-acesso-web:
+    build: ./controle-acesso
+    command: bundle exec rails s -p 3000 -b '0.0.0.0'
+    volumes:
+      - ./controle-acesso:/controle-acesso
+    ports:
+      - "3000:3000"
+    depends_on:
+      - controle-acesso-db
+  controle-turma-db:
+    image: postgres
+    volumes:
+      - ./tmp/db-turma:/var/lib/postgresql/data
+  controle-turma-web:
+    build: ./controle-turma
+    command: bundle exec rails s -p 3001 -b '0.0.0.0'
+    volumes:
+      - ./controle-turma:/controle-turma
+    ports:
+      - "3001:3001"
+    depends_on:
+      - controle-turma-db

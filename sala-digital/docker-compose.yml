@@ -47,4 +47,8 @@ services:
     build: ./frontend-materia
     ports:
      - "8000:80"
+  frontend-turma:
+    build: ./frontend-turma
+    ports:
+     - "8001:80"
 

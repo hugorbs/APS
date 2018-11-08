@@ -12,9 +12,13 @@ O aumento da utilização da internet tem modificado o ambiente de sala de aula 
 ## Entrega 1
 [Escopo do Projeto](https://github.com/hugorbs/APS/blob/master/Entrega%201/Escopo%20do%20Projeto.pdf)
 
-## Entrega 2
+## Entrega 2 - RUP
 [Projeto](https://github.com/hugorbs/APS/tree/master/sala-de-aula)
 
 [Apresentação](https://github.com/hugorbs/APS/blob/master/Entrega%202/Apresenta%C3%A7%C3%A3o.pptx)
 
 [Arquivos de Casos de Uso e Arquitetura](https://github.com/hugorbs/APS/tree/master/Entrega%202)
+
+## Entrega 3 - SOA
+
+[Apresentação](https://github.com/hugorbs/APS/blob/master/Entrega%203%20-%20SOA/Apresentacao%20SOA.pptx)

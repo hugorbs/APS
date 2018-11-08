@@ -1,0 +1,7 @@
+FROM node:10-alpine
+ADD ./ /code
+WORKDIR /code
+RUN npm install -g typescript
+RUN npm install
+RUN tsc
+CMD ["npm", "start"]

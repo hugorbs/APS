@@ -3,12 +3,12 @@ import Person from '../data/person.model';
 
 const sequelize =  new Sequelize({
   database: 'some_db',
-  dialect: 'mysql',
-  username: 'root',
+  dialect: 'postgres',
+  username: 'postgres',
   password: 'test_pass',
   host: 'db-materia',
-  port: 3306,
-  storage: 'mysql',
+  port: 5432,
+  storage: 'postgres',
 });
 
 // sequelize.addModels([Person]);

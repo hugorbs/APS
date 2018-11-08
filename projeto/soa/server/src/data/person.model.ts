@@ -21,10 +21,18 @@ const attributes = {
     type: Sequelize.STRING(25),
     allowNull: true,
   },
+  login: {
+    type: Sequelize.STRING(25),
+    allowNull: true,
+    primaryKey: true,
+  },
+  senha: {
+    type: Sequelize.STRING(25),
+    allowNull: true,
+  },
   cpf: {
     type: Sequelize.STRING(25),
     allowNull: false,
-    primaryKey: true,
   },
   // createdAt: {
   //   field: 'insertDate',

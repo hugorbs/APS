@@ -1,10 +1,10 @@
 version: '0.1'
 
 services:
-  frontend-cadastro:
-    build: ./frontend
-    ports:
-     - "80:80"
+  # frontend-cadastro:
+  #   build: ./frontend
+  #   ports:
+  #    - "80:80"
   server-cadastro:
     build: ./server
     links:
@@ -17,16 +17,14 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: 'test_pass'
       MYSQL_DATABASE: 'some_db'
-      # MYSQL_USER: 'root'
-      # MYSQL_PASS: 'pass'
     ports:
       - "3306:3306"
     volumes:
       - /opt/mysql_data:/var/lib/mysql
-  frontend-materia:
-    build: ./frontend.1
-    ports:
-     - "8000:80"
+  # frontend-materia:
+  #   build: ./frontend.1
+  #   ports:
+  #    - "8000:80"
   server-materia:
     build: ./server-1
     links:
@@ -34,14 +32,13 @@ services:
     ports:
      - "8081:8080"
   db-materia:
-    container_name: mysql-materia
-    image: mysql:5.7
+    container_name: postgres-materia
+    image: postgres:10
     environment:
-      MYSQL_ROOT_PASSWORD: 'test_pass'
-      MYSQL_DATABASE: 'some_db'
-      # MYSQL_USER: 'root'
-      # MYSQL_PASS: 'pass'
+      POSTGRES_DB: 'some_db'
+      POSTGRES_USER: 'postgres'
+      POSTGRES_PASSWORD: 'test_pass'
     ports:
-      - "3307:3306"
+      - "5432:5432"
     volumes:
-      - /opt/mysql_data2/:/var/lib/mysql
+      - /var/lib/postgresql/data:/var/lib/postgresql/data

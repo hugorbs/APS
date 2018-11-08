@@ -1,21 +1,5 @@
 import { Table, Column, Model, Sequelize } from 'sequelize-typescript';
 
-// @Table
-// class Person extends Model<Person> {
-
-//   @Column
-//   get name(): string {
-//     return 'My name is ' + this.getDataValue('name');
-//   }
-
-//   set name(value: string) {
-//     this.setDataValue('name', value);
-//   }
-
-//   // @HasMany(() => Hobby)
-//   // hobbies: Hobby[];
-// }
-
 const attributes = {
   codMateria: {
     type: Sequelize.INTEGER,
@@ -23,23 +7,17 @@ const attributes = {
     primaryKey: true,
   },
   nome: {
-    type: Sequelize.INTEGER,
+    type: Sequelize.STRING(25),
     allowNull: false,
   },
   ementa: {
-    type: Sequelize.INTEGER,
+    type: Sequelize.STRING(50),
     allowNull: false,
   },
   preRequisitos: {
-    type: Sequelize.INTEGER,
+    type: Sequelize.ARRAY(Sequelize.INTEGER),
     allowNull: false,
   }
-  // createdAt: {
-  //   field: 'insertDate',
-  //   type: Sequelize.DATE,
-  //   defaultValue: Sequelize.literal('CURRENT_TIMESTAMP'),
-  //   allowNull: false,
-  // },
 };
 
 const options = {

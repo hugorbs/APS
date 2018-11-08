@@ -20,5 +20,10 @@ O aumento da utilização da internet tem modificado o ambiente de sala de aula 
 [Arquivos de Casos de Uso e Arquitetura](https://github.com/hugorbs/APS/tree/master/Entrega%202)
 
 ## Entrega 3 - SOA
-
 [Apresentação](https://github.com/hugorbs/APS/blob/master/Entrega%203%20-%20SOA/Apresentacao%20SOA.pptx)
+
+[Análise](https://github.com/hugorbs/APS/tree/master/Entrega%203%20-%20SOA/An%C3%A1lise)
+
+[Projeto](https://github.com/hugorbs/APS/tree/master/Entrega%203%20-%20SOA/Projeto)
+
+[Interface Gráfica](https://github.com/hugorbs/APS/tree/master/Entrega%203%20-%20SOA/Interface%20Gr%C3%A1fica)
